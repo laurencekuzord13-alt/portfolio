@@ -1,0 +1,15 @@
+config/*.txt
+
+logs/
+*.logs
+
+.env
+.DS_Store
+
+bin/git_config_profile.cmd
+
+# ignorer tout le contenu du dossier pages
+pages/*
+
+# Exclure project-views.html de l'ignorance 
+!pages/project-view.html
