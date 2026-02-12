@@ -1,100 +1,69 @@
 <!doctype html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex,follow" />
-    <title>403 | Accès interdit</title>
-    <style>
-        :root {
-            --bg: #0f172a;
-            --bg2: #1e293b;
-            --text: #f8fafc;
-            --muted: #cbd5e1;
-            --danger: #ef4444;
-            --danger2: #dc2626;
-            --line: #334155;
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            margin: 0;
-            min-height: 100dvh;
-            display: grid;
-            place-items: center;
-            font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(760px 400px at 15% -10%, #3f1d2e 0%, transparent 62%),
-                linear-gradient(160deg, var(--bg), var(--bg2));
-            padding: 24px;
-        }
-
-        .card {
-            width: min(720px, 100%);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 36px 28px;
-            background: rgba(7, 12, 21, .72);
-        }
-
-        .code {
-            font-size: 72px;
-            line-height: 1;
-            margin: 0 0 10px
-        }
-
-        h1 {
-            margin: 0 0 10px;
-            font-size: 32px
-        }
-
-        p {
-            margin: 0 0 22px;
-            color: var(--muted)
-        }
-
-        .actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap
-        }
-
-        .btn {
-            text-decoration: none;
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-weight: 700;
-            border: 1px solid var(--line);
-            color: var(--text);
-        }
-
-        .btn.primary {
-            background: var(--danger);
-            color: #fff;
-            border-color: transparent
-        }
-
-        .btn.primary:hover {
-            background: var(--danger2)
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,follow" />
+  <title>403 | Acces interdit</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg2: #1e293b;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --danger: #ef4444;
+      --danger2: #dc2626;
+      --line: #334155;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(760px 400px at 15% -10%, #3f1d2e 0%, transparent 62%),
+        linear-gradient(160deg, var(--bg), var(--bg2));
+      padding: 24px;
+    }
+    .card {
+      width: min(720px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px 28px;
+      background: rgba(7, 12, 21, 0.72);
+    }
+    .code { font-size: 72px; line-height: 1; margin: 0 0 10px; }
+    h1 { margin: 0 0 10px; font-size: 32px; }
+    p { margin: 0 0 22px; color: var(--muted); }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+    .btn.primary {
+      background: var(--danger);
+      color: #fff;
+      border-color: transparent;
+    }
+    .btn.primary:hover { background: var(--danger2); }
+  </style>
 </head>
-
 <body>
-    <main class="card">
-        <p class="code">403</p>
-        <h1>Accès interdit</h1>
-        <p>Tu n’as pas l’autorisation d’accéder à cette ressource.</p>
-        <div class="actions">
-            <a class="btn primary" href="/index.html">Retour à l’accueil</a>
-            <a class="btn" href="/pages/contact.html">Me contacter</a>
-        </div>
-    </main>
+  <main class="card">
+    <p class="code">403</p>
+    <h1>Acces interdit</h1>
+    <p>Vous n avez pas l autorisation d acceder a cette ressource.</p>
+    <div class="actions">
+      <a class="btn primary" href="/index.html">Retour a l accueil</a>
+      <a class="btn" href="/pages/contact.html">Me contacter</a>
+    </div>
+  </main>
 </body>
-
 </html>

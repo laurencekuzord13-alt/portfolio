@@ -1,14 +1,14 @@
 User-agent: *
 Allow: /
 
-# Bloquer les zones non publiques (si elles existent)
+# Zones non publiques (si elles existent)
 Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
 
-# Pages d'erreur (optionnel)
+# Pages d erreur
 Disallow: /403.html
 Disallow: /404.html
 Disallow: /405.html
 
-Sitemap: https://ton-domaine.com/sitemap.xml
+Sitemap: https://www.monportfolio.test/sitemap.xml

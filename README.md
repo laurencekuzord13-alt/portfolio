@@ -1,29 +1,28 @@
-# Portfolio - KUZORD Laurence Talé
+﻿# Portfolio - KUZORD Laurence Tale
 
-Site portfolio personnel présentant mon profil de développeuse Web et Web Mobile, mes projets et mes contacts.
+Site portfolio personnel presentant mon profil de developpeuse web et web mobile.
 
-## Aperçu
+## Apercu
 
-Ce projet contient une page web responsive avec :
-- une section d’introduction (`Hero`)
-- une section “À propos”
-- une section “Mes projets” avec cartes
-- une section “Contact”
-- des animations via CSS/JavaScript
+Le projet contient:
+- page d'accueil avec sections hero, a propos, projets, contact
+- theme clair/sombre
+- support FR/EN via fichiers i18n
+- animations d'apparition au scroll
 
-## Technologies utilisées
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript (vanilla)
 
-## Structure du projet
+## Structure
 
-```bash
-.
-├── index.html
-├── style.css
-├── script.js
-└── images/
+- `index.html`
+- `assets/css/style.css`
+- `assets/js/app.js`
+- `assets/i18n/fr.json`
+- `assets/i18n/en.json`
+- `pages/`
 
 License: MIT

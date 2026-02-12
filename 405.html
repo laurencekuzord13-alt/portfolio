@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>405 | Methode non autorisee</title>
+  <style>
+    :root {
+      --bg: #111827;
+      --bg2: #1f2937;
+      --text: #f9fafb;
+      --muted: #c7d2fe;
+      --accent: #f59e0b;
+      --accent2: #d97706;
+      --line: #334155;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(700px 380px at 90% -5%, #3b2d17 0%, transparent 62%),
+        linear-gradient(165deg, var(--bg), var(--bg2));
+      padding: 24px;
+    }
+    .card {
+      width: min(720px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 36px 28px;
+      background: rgba(10, 14, 24, 0.72);
+    }
+    .code { font-size: 72px; line-height: 1; margin: 0 0 10px; }
+    h1 { margin: 0 0 10px; font-size: 32px; }
+    p { margin: 0 0 10px; color: var(--muted); }
+    .hint {
+      display: inline-block;
+      margin: 6px 0 22px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 14px;
+    }
+    .btn {
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-weight: 700;
+      background: var(--accent);
+      color: #231400;
+      border: 0;
+      display: inline-block;
+    }
+    .btn:hover { background: var(--accent2); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="code">405</p>
+    <h1>Methode non autorisee</h1>
+    <p>La route existe, mais cette action n est pas permise sur cette ressource.</p>
+    <span class="hint">Exemple API: utilisez <strong>GET</strong> au lieu de <strong>POST</strong>.</span><br>
+    <a class="btn" href="/index.html">Retour a l accueil</a>
+  </main>
+</body>
+</html>
