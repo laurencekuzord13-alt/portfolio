@@ -44,7 +44,7 @@
       aria-label="Ouvrir le menu">Menu</button>
     <nav class="nav" id="site-nav">
       <a href="#home" data-i18n="nav_home">Accueil</a>
-      <a href="#about" data-i18n="nav_about">A propos</a>
+      <a href="#about" data-i18n="nav_about">À propos</a>
       <a href="#skills" data-i18n="nav_skills">Compétences</a>
       <a href="#projects" data-i18n="nav_projects">Projets</a>
       <a href="#services" data-i18n="nav_services">Services</a>
@@ -93,7 +93,7 @@
     </section>
 
     <section id="about" class="section reveal surface">
-      <h2 class="section-title" data-i18n="about_title">A propos de moi</h2>
+      <h2 class="section-title" data-i18n="about_title">À propos de moi</h2>
       <p class="section-text" data-i18n="about_text_1">
         Je conçois des expériences web centrées utilisateur, avec une attention forte sur
         la lisibilité du code, la performance et l'accessibilité.
@@ -124,6 +124,15 @@
           <p data-i18n="skills_soft_text">Rigueur, autonomie, communication claire et orientation solution.</p>
         </article>
       </div>
+    </section>
+
+    <section id="languages" class="section reveal surface">
+      <h2 class="section-title" data-i18n="languages_title">Langues</h2>
+      <p class="section-text">
+        <span data-i18n="languages_line_1">Français : maîtrise orale et écrite.</span><br />
+        <span data-i18n="languages_line_2">Anglais : niveau scolaire (écrit, oral, compréhension).</span><br />
+        <span data-i18n="languages_line_3">Espagnol : A1 intermédiaire (Duolingo).</span>
+      </p>
     </section>
 
     <section id="projects" class="section reveal">
@@ -268,7 +277,10 @@
   </main>
 
   <footer class="site-footer section">
-    <p data-i18n="footer_copyright">&copy; 2026 Laurence Talé KUZORD - Portfolio</p>
+    <p>
+      &copy; <span id="js-year">2026</span>
+      <span data-i18n="footer_text">Laurence Talé KUZORD - Portfolio</span>
+    </p>
   </footer>
 
   <script src="assets/js/app.js"></script>

@@ -28,7 +28,7 @@
         if (btn) {
             const isDark = theme === "dark";
             btn.setAttribute("aria-label", isDark ? t("theme_toggle_light", "Enable light mode") : t("theme_toggle_dark", "Enable dark mode"));
-            btn.textContent = isDark ? "Light" : "Dark";
+            btn.textContent = isDark ? t("theme_toggle_light_short", "Light") : t("theme_toggle_dark_short", "Dark");
         }
     }
 
@@ -77,6 +77,33 @@
         refreshDynamicControls();
     }
 
+    function updateNavToggleLabels() {
+        const toggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector("#site-nav");
+        if (!toggle || !nav) return;
+        const isOpen = nav.classList.contains("is-open");
+        toggle.textContent = t("nav_toggle_menu", "Menu");
+        toggle.setAttribute("aria-label", isOpen ? t("nav_toggle_close", "Close menu") : t("nav_toggle_open", "Open menu"));
+    }
+
+    function updateBrandLabel() {
+        const brand = document.querySelector(".brand");
+        if (!brand) return;
+        brand.setAttribute("aria-label", t("brand_home", "Back to home"));
+    }
+
+    function updateLightboxLabels() {
+        const overlay = document.querySelector(".project-lightbox");
+        if (!overlay) return;
+        const closeBtn = overlay.querySelector(".project-lightbox-close");
+        const panel = overlay.querySelector(".project-lightbox-panel");
+        if (closeBtn) closeBtn.setAttribute("aria-label", t("lightbox_close", "Close"));
+        if (panel) panel.setAttribute("aria-label", t("lightbox_label", "Project details"));
+        document.querySelectorAll(".projects .card img").forEach((image) => {
+            image.setAttribute("aria-label", t("lightbox_open", "Open project image"));
+        });
+    }
+
     function refreshDynamicControls() {
         const themeBtn = document.querySelector("[data-theme-toggle]");
         if (themeBtn) {
@@ -96,6 +123,10 @@
             scrollTopBtn.setAttribute("aria-label", t("scroll_top", "Back to top"));
             scrollTopBtn.textContent = t("scroll_top_short", "Top");
         }
+
+        updateNavToggleLabels();
+        updateBrandLabel();
+        updateLightboxLabels();
     }
 
     function createLanguageToggle() {
@@ -160,13 +191,13 @@
         const closeNav = () => {
             nav.classList.remove("is-open");
             toggle.setAttribute("aria-expanded", "false");
-            toggle.setAttribute("aria-label", "Ouvrir le menu");
+            updateNavToggleLabels();
         };
 
         toggle.addEventListener("click", () => {
             const isOpen = nav.classList.toggle("is-open");
             toggle.setAttribute("aria-expanded", String(isOpen));
-            toggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+            updateNavToggleLabels();
         });
 
         nav.querySelectorAll("a").forEach((link) => {
@@ -176,6 +207,8 @@
         window.addEventListener("resize", () => {
             if (window.innerWidth > 980) closeNav();
         });
+
+        updateNavToggleLabels();
     }
 
     function initRevealAnimation() {
@@ -200,8 +233,8 @@
         overlay.className = "project-lightbox";
         overlay.setAttribute("aria-hidden", "true");
         overlay.innerHTML = `
-            <button type="button" class="project-lightbox-close" aria-label="Fermer">x</button>
-            <article class="project-lightbox-panel" role="dialog" aria-modal="true" aria-label="Presentation du projet">
+            <button type="button" class="project-lightbox-close" aria-label="${t("lightbox_close", "Close")}">x</button>
+            <article class="project-lightbox-panel" role="dialog" aria-modal="true" aria-label="${t("lightbox_label", "Project details")}">
                 <img class="project-lightbox-image" alt="" />
                 <div class="project-lightbox-content">
                     <h3></h3>
@@ -224,8 +257,8 @@
             const text = card ? card.querySelector(".card-content p") : null;
 
             lightboxImage.src = image.currentSrc || image.src;
-            lightboxImage.alt = image.alt || "Image projet";
-            lightboxTitle.textContent = title ? title.textContent.trim() : "Projet";
+            lightboxImage.alt = image.alt || t("lightbox_image", "Project image");
+            lightboxTitle.textContent = title ? title.textContent.trim() : t("lightbox_project", "Project");
             lightboxText.textContent = text ? text.textContent.trim() : "";
 
             overlay.classList.add("is-open");
@@ -248,7 +281,7 @@
         projectImages.forEach((image) => {
             image.setAttribute("tabindex", "0");
             image.setAttribute("role", "button");
-            image.setAttribute("aria-label", "Ouvrir l image du projet");
+            image.setAttribute("aria-label", t("lightbox_open", "Open project image"));
             image.addEventListener("click", () => openLightbox(image));
             image.addEventListener("keydown", (event) => {
                 if (event.key === "Enter" || event.key === " ") {
@@ -314,6 +347,8 @@
     }
 
     document.addEventListener("DOMContentLoaded", async () => {
+        const yearEl = document.getElementById("js-year");
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
         initNavToggle();
         initFormSubmitRedirects();
         createThemeToggle();
