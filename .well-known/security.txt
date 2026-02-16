@@ -1,0 +1,6 @@
+Contact: mailto:laurencekuzord13@gmail.com
+Expires: 2026-12-31T23:59:59Z
+Preferred-Languages: fr, en
+Canonical: https://www.monportfolio.test/.well-known/security.txt
+Policy: https://www.monportfolio.test/pages/privacy-policy.html
+Hiring: https://www.monportfolio.test/pages/contact.html

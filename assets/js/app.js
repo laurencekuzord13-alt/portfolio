@@ -152,6 +152,32 @@
         onScroll();
     }
 
+    function initNavToggle() {
+        const toggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector("#site-nav");
+        if (!toggle || !nav) return;
+
+        const closeNav = () => {
+            nav.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Ouvrir le menu");
+        };
+
+        toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", String(isOpen));
+            toggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeNav);
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 980) closeNav();
+        });
+    }
+
     function initRevealAnimation() {
         const elements = document.querySelectorAll(".reveal");
         if (!elements.length) return;
@@ -267,7 +293,29 @@
         });
     }
 
+    function initFormSubmitRedirects() {
+        const forms = document.querySelectorAll('form[action*="formsubmit.co"]');
+        if (!forms.length) return;
+
+        forms.forEach((form) => {
+            const pathHint = form.getAttribute("data-next-path");
+            if (!pathHint) return;
+
+            const nextUrl = new URL(pathHint, window.location.href).href;
+            let nextInput = form.querySelector('input[name="_next"]');
+            if (!nextInput) {
+                nextInput = document.createElement("input");
+                nextInput.type = "hidden";
+                nextInput.name = "_next";
+                form.appendChild(nextInput);
+            }
+            nextInput.value = nextUrl;
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", async () => {
+        initNavToggle();
+        initFormSubmitRedirects();
         createThemeToggle();
         createLanguageToggle();
         await initI18n();

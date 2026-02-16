@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Laurence Talé KUZORD - Developpeuse Web</title>
-  <meta name="title" content="Portfolio de Laurence Talé KUZORD - Developpeuse Web" />
+  <title>Portfolio | Laurence Talé KUZORD - Développeuse Web</title>
+  <meta name="title" content="Portfolio de Laurence Talé KUZORD - Développeuse Web" />
   <meta name="description"
-    content="Portfolio de Laurence Talé KUZORD: developpement front-end, integration responsive, accessibilite et projets web concrets." />
+    content="Portfolio de Laurence Talé KUZORD: développement front-end, intégration responsive, accessibilité et projets web concrets." />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.monportfolio.test/" />
-  <meta property="og:title" content="Portfolio de Laurence Tale KUZORD - Developpeuse Web" />
+  <meta property="og:title" content="Portfolio de Laurence Talé KUZORD - Développeuse Web" />
   <meta property="og:description" content="Interfaces web modernes, performantes et accessibles." />
   <meta property="og:image" content="https://www.monportfolio.test/img/logo-800x800.webp" />
   <meta property="og:image:alt" content="Logo du portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.monportfolio.test/" />
-  <meta name="twitter:title" content="Portfolio de Laurence Talé KUZORD - Developpeuse Web" />
+  <meta name="twitter:title" content="Portfolio de Laurence Talé KUZORD - Développeuse Web" />
   <meta name="twitter:description" content="Interfaces web modernes, performantes et accessibles." />
 
   <meta name="twitter:image" content="https://www.monportfolio.test/img/logo-800x800.webp" />
@@ -28,151 +28,176 @@
 </head>
 
 <body>
+  <div class="background-scene" aria-hidden="true">
+    <video class="background-video" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/media/background.mp4" type="video/mp4" />
+    </video>
+    <div class="background-overlay"></div>
+  </div>
+
   <header class="site-header section">
-    <a class="brand" href="#home" aria-label="Retour a l accueil">
+    <a class="brand" href="#home" aria-label="Retour à l'accueil">
       <img src="img/logo-110x110.webp" alt="Logo Laurence Talé KUZORD" />
       <span>Laurence Talé KUZORD</span>
     </a>
-    <nav class="nav">
-      <a href="#home">Accueil</a>
-      <a href="#about">A propos</a>
-      <a href="#skills">Competences</a>
-      <a href="#projects">Projets</a>
-      <a href="#services">Services</a>
-      <a href="#experience">Parcours</a>
-      <a href="#contact">Contact</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+      aria-label="Ouvrir le menu">Menu</button>
+    <nav class="nav" id="site-nav">
+      <a href="#home" data-i18n="nav_home">Accueil</a>
+      <a href="#about" data-i18n="nav_about">A propos</a>
+      <a href="#skills" data-i18n="nav_skills">Compétences</a>
+      <a href="#projects" data-i18n="nav_projects">Projets</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#experience" data-i18n="nav_experience">Parcours</a>
+      <a class="nav-cta" href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
   </header>
 
   <main class="site-main">
-    <section id="home" class="hero section">
+    <section id="home" class='hero section'>
       <div class="hero-content">
-        <p class="eyebrow">Developpeuse Web et Web Mobile</p>
-        <h1 class="fade-in">Je crée des interfaces web claires, rapides et professionnelles.</h1>
-        <p class="hero-subtitle">
-          Je suis Laurence Talé KUZORD. Je transforme des besoins metier en pages web utiles,
-          responsives et faciles a maintenir.
+        <p class="eyebrow" data-i18n="hero_eyebrow">Développeuse Web et Web Mobile</p>
+        <h1 class="fade-in" data-i18n="hero_title">Je crée des interfaces web claires, rapides et professionnelles.</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Je suis Laurence Talé KUZORD. Je transforme des besoins métier en pages web utiles,
+          responsives et faciles à maintenir.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Voir mes projets</a>
-          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+          <a class="btn btn-primary" href="#projects" data-i18n="hero_cta_projects">Voir mes projets</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero_cta_contact">Me contacter</a>
         </div>
       </div>
       <aside class="hero-panel">
-        <h2>Profil rapide</h2>
+        <h2 data-i18n="quick_profile_title">Profil rapide</h2>
         <ul>
-          <li>Formation DWWM en cours</li>
-          <li>Recherche d alternance</li>
-          <li>Focus Full-stack </li>
-          <li>Base solide HTML CSS JavaScript</li>
+          <li data-i18n="quick_item_training">Formation DWWM (Développeuse web et web mobile)</li>
+          <li data-i18n="quick_item_search">Recherche d'alternance</li>
+          <li data-i18n="quick_item_focus">Focus Full-stack</li>
+          <li data-i18n="quick_item_base">Base solide HTML CSS JavaScript</li>
         </ul>
         <div class="stats">
           <div>
             <strong>6+</strong>
-            <span>projets réalises</span>
+            <span data-i18n="stats_projects">projets réalisés</span>
           </div>
           <div>
-            <strong>3</strong>
-            <span>technos principales</span>
+            <strong>3+</strong>
+            <span data-i18n="stats_technos">technos principales</span>
           </div>
           <div>
             <strong>100%</strong>
-            <span>mobile friendly</span>
+            <span data-i18n="stats_mobile">mobile friendly</span>
           </div>
         </div>
       </aside>
     </section>
 
     <section id="about" class="section reveal surface">
-      <h2 class="section-title">A propos de moi</h2>
-      <p class="section-text">
-        Je conçois des experiences web centrées utilisateur, avec une attention forte sur
-        la lisibilite du code, la performance et l accessibilite.
+      <h2 class="section-title" data-i18n="about_title">A propos de moi</h2>
+      <p class="section-text" data-i18n="about_text_1">
+        Je conçois des expériences web centrées utilisateur, avec une attention forte sur
+        la lisibilité du code, la performance et l'accessibilité.
       </p>
-      <p class="section-text">
+      <p class="section-text" data-i18n="about_text_2">
         Mon objectif: intégrer une équipe en alternance pour contribuer sur des projets concrets,
         apprendre vite et livrer des interfaces fiables.
       </p>
     </section>
 
     <section id="skills" class="section reveal">
-      <h2 class="section-title">Compétences</h2>
+      <h2 class="section-title" data-i18n="skills_title">Compétences</h2>
       <div class="skills-grid">
         <article class="info-card">
-          <h3>Front-end</h3>
-          <p>HTML5 semantique, CSS3 moderne (flex/grid), JavaScript vanilla.</p>
+          <h3 data-i18n="skills_front_title">Front-end</h3>
+          <p data-i18n="skills_front_text">HTML5 sémantique, CSS3 moderne (flex/grid), JavaScript vanilla.</p>
         </article>
         <article class="info-card">
-          <h3>Qualite</h3>
-          <p>Responsive design, accessibilite de base, structure de code propre.</p>
+          <h3 data-i18n="skills_quality_title">Qualité</h3>
+          <p data-i18n="skills_quality_text">Responsive design, accessibilité de base, structure de code propre.</p>
         </article>
         <article class="info-card">
-          <h3>Workflow</h3>
-          <p>Git/GitHub, organisation de projet, iteration par livrables.</p>
+          <h3 data-i18n="skills_workflow_title">Workflow</h3>
+          <p data-i18n="skills_workflow_text">Git/GitHub, organisation de projet, itération par livrables.</p>
         </article>
         <article class="info-card">
-          <h3>Soft skills</h3>
-          <p>Rigueur, autonomie, communication claire et orientation solution.</p>
+          <h3 data-i18n="skills_soft_title">Soft skills</h3>
+          <p data-i18n="skills_soft_text">Rigueur, autonomie, communication claire et orientation solution.</p>
         </article>
       </div>
     </section>
 
     <section id="projects" class="section reveal">
-      <h2 class="section-title">Mes projets</h2>
+      <h2 class="section-title" data-i18n="projects_title">Mes projets</h2>
       <div class="projects">
         <article class="card">
           <img src="img/logo-800x800.webp" alt="Bourse Tech" loading="lazy" />
           <div class="card-content">
-            <h3>Bourse Tech</h3>
-            <p>
-              Conception d une interface de consultation orientee donnees financieres, avec une
-              architecture front-end modulaire pour faciliter la maintenance et l evolution du projet.
-              Mise en place d une presentation claire des informations (cartes, tableaux, filtres)
-              afin d ameliorer la lecture et la prise de decision utilisateur.
+            <h3 data-i18n="project_1_title">Bourse Tech</h3>
+            <p data-i18n="project_1_text">
+              Conception d'une interface de consultation orientée données financières, avec une
+              architecture front-end modulaire pour faciliter la maintenance et l'évolution du projet.
+              Mise en place d'une présentation claire des informations (cartes, tableaux, filtres)
+              afin d'améliorer la lecture et la prise de décision utilisateur.
             </p>
             <p class="chip-row">
               <span class="chip">HTML</span>
               <span class="chip">CSS</span>
               <span class="chip">JavaScript</span>
-              <span class="chip">Data UI</span>
+              <span class="chip">Data </span>
             </p>
           </div>
         </article>
         <article class="card">
           <img src="img/logo-200x200.webp" alt="Projet Portfolio" loading="lazy" />
           <div class="card-content">
-            <h3>Portfolio Professionnel</h3>
-            <p>
-              Realisation de mon site vitrine responsive pour presenter mon profil, mes competences
-              et mes projets de maniere structurée. Integration d un systeme de theme clair/sombre,
-              d animations de reveal au scroll et d une organisation de sections orientee experience
-              utilisateur pour renforcer la lisibilite du contenu.
+            <h3 data-i18n="project_2_title">Portfolio Professionnel</h3>
+            <p data-i18n="project_2_text">
+              Réalisation de mon site vitrine responsive pour présenter mon profil, mes compétences
+              et mes projets de manière structurée. Intégration d'un système de thème clair/sombre,
+              d'animations de reveal au scroll et d'une organisation de sections orientée expérience
+              utilisateur pour renforcer la lisibilité du contenu.
             </p>
             <p class="chip-row">
               <span class="chip">UI</span>
               <span class="chip">UX</span>
               <span class="chip">Responsive</span>
-              <span class="chip">Accessibilite</span>
+              <span class="chip">Accessibilité</span>
             </p>
           </div>
         </article>
         <article class="card">
           <img src="img/logo-96x96.webp" alt="Projet Memoria" loading="lazy" />
           <div class="card-content">
-            <h3>Memoria</h3>
-            <p>
-              Projet centre sur la conception et l implementation d une base de donnees en SQL natif.
-              Creation du schema relationnel et mise en oeuvre complete des operations CRUD (creation,
-              lecture, mise a jour, suppression) pour garantir une gestion fiable des donnees.
-              Developpement des fonctionnalites d ajout, modification et suppression des pepites,
-              des utilisateurs et des tags, avec une logique metier coherente et une structure
-              de donnees durable.
+            <h3 data-i18n="project_3_title">Memoria</h3>
+            <p data-i18n="project_3_text">
+              Projet centré sur la conception et l'implémentation d'une base de données en SQL natif.
+              Création du schéma relationnel et mise en œuvre complète des opérations CRUD (création,
+              lecture, mise à jour, suppression) pour garantir une gestion fiable des données.
+              Développement des fonctionnalités d'ajout, modification et suppression des pépites,
+              des utilisateurs et des tags, avec une logique métier cohérente et une structure
+              de données durable.
             </p>
             <p class="chip-row">
               <span class="chip">SQL</span>
               <span class="chip">CRUD</span>
-              <span class="chip">Modelisation</span>
-              <span class="chip">Back-end Logic</span>
+              <span class="chip">Modélisation</span>
+              <span class="chip">Logique Back-end</span>
+            </p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/logo-700x700.webp" alt="Projet Landing Page" loading="lazy" />
+          <div class="card-content">
+            <h3 data-i18n="project_4_title">Landing Page</h3>
+            <p data-i18n="project_4_text">
+              Création d'une landing page responsive et dynamique avec un compte à rebours.
+              Ce projet, réalisé en formation, m'a permis de concevoir pour la première fois
+              une landing page complète, claire et adaptée à tous les écrans.
+            </p>
+            <p class="chip-row">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
             </p>
           </div>
         </article>
@@ -180,62 +205,70 @@
     </section>
 
     <section id="services" class="section reveal surface">
-      <h2 class="section-title">Services que je peux proposer</h2>
+      <h2 class="section-title" data-i18n="services_title">Services que je peux proposer</h2>
       <div class="services-list">
         <article class="info-card">
-          <h3>Integration web</h3>
-          <p>Transformation de maquettes en pages HTML/CSS propres et adaptatives.</p>
+          <h3 data-i18n="service_1_title">Intégration web</h3>
+          <p data-i18n="service_1_text">Transformation de maquettes en pages HTML/CSS propres et adaptatives.</p>
         </article>
         <article class="info-card">
-          <h3>Amelioration UX</h3>
-          <p>Reprise d interfaces existantes pour clarifier la navigation et les contenus.</p>
+          <h3 data-i18n="service_2_title">Amélioration UX</h3>
+          <p data-i18n="service_2_text">Reprise d'interfaces existantes pour clarifier la navigation et les contenus.
+          </p>
         </article>
         <article class="info-card">
-          <h3>Maintenance front</h3>
-          <p>Corrections, optimisation visuelle, et fiabilisation de pages existantes.</p>
+          <h3 data-i18n="service_3_title">Maintenance front</h3>
+          <p data-i18n="service_3_text">Corrections, optimisation visuelle, et fiabilisation de pages existantes.</p>
         </article>
       </div>
     </section>
 
     <section id="experience" class="section reveal">
-      <h2 class="section-title">Parcours</h2>
+      <h2 class="section-title" data-i18n="experience_title">Parcours</h2>
       <div class="timeline">
         <article class="timeline-item">
-          <p class="timeline-date">2025 - 2026</p>
-          <h3>Formation Developpeuse Web et Web Mobile</h3>
-          <p>Approfondissement en integration web, JavaScript et bonnes pratiques de projet.</p>
+          <p class="timeline-date" data-i18n="exp_1_date">2025 - 2026</p>
+          <h3 data-i18n="exp_1_title">Formation Développeuse Web et Web Mobile</h3>
+          <p data-i18n="exp_1_text">Approfondissement en intégration web, JavaScript et bonnes pratiques de projet.</p>
         </article>
         <article class="timeline-item">
-          <p class="timeline-date">Actuellement</p>
-          <h3>Portfolio et projets personnels</h3>
-          <p>Creation de projets concrets pour renforcer la qualite de livraison front-end.</p>
+          <p class="timeline-date" data-i18n="exp_2_date">Actuellement</p>
+          <h3 data-i18n="exp_2_title">Portfolio et projets personnels</h3>
+          <p data-i18n="exp_2_text">Création de projets concrets pour renforcer la qualité de livraison front-end.</p>
         </article>
       </div>
     </section>
 
     <section id="contact" class="section reveal surface">
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form" action="https://formsubmit.co/laurencekuzord13@gmail.com" method="POST">
+      <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+      <form class="contact-form" action="https://formsubmit.co/laurencekuzord13@gmail.com" method="POST"
+        data-next-path="pages/message-envoye.html">
         <input type="hidden" name="_subject" value="Nouveau message depuis ton portfolio" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://www.monportfolio.test/#contact" />
+        <input type="hidden" name="_next" value="https://formsubmit.co/thanks" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <input type="text" name="name" required autocomplete="name" placeholder="Nom complet" />
-        <input type="email" name="email" required autocomplete="email" placeholder="Email" />
-        <textarea name="message" rows="5" required placeholder="Votre message"></textarea>
-        <button type="submit">Envoyer</button>
+        <input type="text" name="name" required autocomplete="name" placeholder="Nom complet"
+          data-i18n-placeholder="contact_name" />
+        <input type="email" name="email" required autocomplete="email" placeholder="Email"
+          data-i18n-placeholder="contact_email" />
+        <textarea name="message" rows="5" required placeholder="Votre message"
+          data-i18n-placeholder="contact_message"></textarea>
+        <button type="submit" data-i18n="contact_submit">Envoyer</button>
       </form>
       <div class="contact-cards">
-        <p class="section-text"><strong>Email:</strong> laurencekuzord13@gmail.com</p>
-        <p class="section-text"><strong>Disponibilite:</strong> Alternance / Projets full-stack</p>
-        <p class="section-text"><strong>Zone:</strong> France (remote ou hybride)</p>
+        <p class="section-text"><strong data-i18n="contact_email_label">Email:</strong> laurencekuzord13@gmail.com</p>
+        <p class="section-text"><strong data-i18n="contact_availability_label">Disponibilité:</strong> <span
+            data-i18n="contact_availability_value">Alternance Conceptrice développeuse d'application (CDA) / Projets
+            full-stack</span></p>
+        <p class="section-text"><strong data-i18n="contact_zone_label">Zone:</strong> <span
+            data-i18n="contact_zone_value">France (remote ou hybride)</span></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer section">
-    <p>&copy; 2026 Laurence Talé KUZORD - Portfolio</p>
+    <p data-i18n="footer_copyright">&copy; 2026 Laurence Talé KUZORD - Portfolio</p>
   </footer>
 
   <script src="assets/js/app.js"></script>
