@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_home": "Accueil",
   "nav_about": "À propos",
   "nav_skills": "Compétences",
@@ -56,12 +56,18 @@
   "service_3_title": "Maintenance front",
   "service_3_text": "Corrections, optimisation visuelle et fiabilisation de pages existantes.",
   "experience_title": "Parcours",
-  "exp_1_date": "2025 - 2026",
-  "exp_1_title": "Formation Développeuse Web et Web Mobile",
-  "exp_1_text": "Approfondissement en intégration web, JavaScript et bonnes pratiques de projet.",
-  "exp_2_date": "Actuellement",
-  "exp_2_title": "Portfolio et projets personnels",
-  "exp_2_text": "Création de projets concrets pour renforcer la qualité de livraison front-end.",
+  "exp_1_date": "Actuellement",
+  "exp_1_title": "Portfolio et projets personnels",
+  "exp_1_text": "Création de projets concrets pour renforcer la qualité de livraison front-end.",
+  "exp_2_date": "2025 - 2026",
+  "exp_2_title": "Formation Développeuse Web et Web Mobile",
+  "exp_2_text": "Approfondissement en intégration web, JavaScript et bonnes pratiques de projet.",
+  "exp_3_date": "2022 - 2025",
+  "exp_3_title": "Formation en bureautique et en programmation - Tech Academy (Togo)",
+  "exp_3_text": "Formation pratique en outils bureautiques et en bases de la programmation.",
+  "exp_4_date": "2023 - 2024",
+  "exp_4_title": "Baccalauréat scientifique - Lycée d'Agoè Centre (Togo)",
+  "exp_4_text": "Diplôme obtenu, équivalent au baccalauréat français",
   "contact_title": "Contact",
   "contact_email_label": "Email :",
   "contact_availability_label": "Disponibilité :",
@@ -86,3 +92,5 @@
   "lightbox_project": "Projet",
   "lightbox_open": "Ouvrir l'image du projet"
 }
+
+
