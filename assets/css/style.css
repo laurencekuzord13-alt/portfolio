@@ -1,11 +1,5 @@
-﻿@font-face {
-  font-family: "Noto Sans Custom";
-  src: url("../fonts/NotoSans-VariableFont.woff2") format("woff2");
-  font-display: swap;
-}
-
-:root {
-  --font-base: "Noto Sans Custom", "Segoe UI", Tahoma, sans-serif;
+﻿:root {
+  --font-base: "Segoe UI", Tahoma, sans-serif;
   --bg: #f4f2ed;
   --bg-2: #ebe5db;
   --panel: #fffdf9;
@@ -856,3 +850,4 @@ a {
     animation: none;
   }
 }
+
