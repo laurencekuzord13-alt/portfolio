@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_home": "Home",
   "nav_about": "About",
   "nav_skills": "Skills",
@@ -56,12 +56,18 @@
   "service_3_title": "Front-end maintenance",
   "service_3_text": "Fixes, visual optimization, and reliability improvements for existing pages.",
   "experience_title": "Experience",
-  "exp_1_date": "2025 - 2026",
-  "exp_1_title": "Web and Mobile Web Developer Training",
-  "exp_1_text": "Deepening web integration, JavaScript, and project best practices.",
-  "exp_2_date": "Currently",
-  "exp_2_title": "Portfolio and personal projects",
-  "exp_2_text": "Building concrete projects to improve front-end delivery quality.",
+  "exp_1_date": "Currently",
+  "exp_1_title": "Portfolio and personal projects",
+  "exp_1_text": "Building concrete projects to improve front-end delivery quality.",
+  "exp_2_date": "2025 - 2026",
+  "exp_2_title": "Web and Mobile Web Developer Training",
+  "exp_2_text": "Deepening web integration, JavaScript, and project best practices.",
+  "exp_3_date": "2022 - 2025",
+  "exp_3_title": "Office and programming training - Tech Academy (Togo)",
+  "exp_3_text": "Hands-on training in office tools and programming fundamentals.",
+  "exp_4_date": "2023 - 2024",
+  "exp_4_title": "Scientific Baccalaureate - Lycée d'Agoè Centre (Togo)",
+  "exp_4_text": "Degree obtained, equivalent to the French baccalaureate",
   "contact_title": "Contact",
   "contact_email_label": "Email:",
   "contact_availability_label": "Availability:",
@@ -86,3 +92,5 @@
   "lightbox_project": "Project",
   "lightbox_open": "Open project image"
 }
+
+
