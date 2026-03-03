@@ -326,15 +326,21 @@
         });
     }
 
+    function getSiteRootUrl() {
+        if (scriptUrl) return new URL("../../", scriptUrl);
+        return new URL("./", window.location.href);
+    }
+
     function initFormSubmitRedirects() {
         const forms = document.querySelectorAll('form[action*="formsubmit.co"]');
         if (!forms.length) return;
 
+        const siteRootUrl = getSiteRootUrl();
         forms.forEach((form) => {
             const pathHint = form.getAttribute("data-next-path");
             if (!pathHint) return;
 
-            const nextUrl = new URL(pathHint, window.location.href).href;
+            const nextUrl = new URL(pathHint, siteRootUrl).href;
             let nextInput = form.querySelector('input[name="_next"]');
             if (!nextInput) {
                 nextInput = document.createElement("input");
