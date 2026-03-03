@@ -8,6 +8,8 @@ logs/
 
 bin/git_config_profile.cmd
 
+!pages/message-envoye.html
+
 # ignorer tout le contenu du dossier pages
 pages/*
 
