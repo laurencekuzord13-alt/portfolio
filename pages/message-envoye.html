@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,follow" />
+  <meta http-equiv="refresh" content="5;url=../index.html" />
+  <title>Message envoye | Portfolio</title>
+  <link rel="icon" href="../favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <main class="section surface" style="margin-top: 32px; text-align: center;">
+    <h1 class="section-title">Message envoye</h1>
+    <p class="section-text" style="margin: 0 auto 18px;">
+      Merci, votre message a bien ete envoye. Je vous repondrai des que possible.
+    </p>
+    <p class="section-text" style="margin: 0 auto 18px;">
+      Vous allez etre redirigee automatiquement vers l'accueil dans 5 secondes.
+    </p>
+    <p class="chip-row" style="justify-content: center;">
+      <a class="btn btn-primary" href="../index.html">Retour a l'accueil</a>
+      <a class="btn btn-ghost" href="../index.html#contact">Envoyer un autre message</a>
+    </p>
+  </main>
+  <script>
+    setTimeout(() => {
+      window.location.replace("../index.html");
+    }, 5000);
+  </script>
+</body>
+</html>
