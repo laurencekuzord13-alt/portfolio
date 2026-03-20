@@ -98,7 +98,15 @@
   "lightbox_label": "Project details",
   "lightbox_image": "Project image",
   "lightbox_project": "Project",
-  "lightbox_open": "Open project image"
+  "lightbox_open": "Open project image",
+  "documents_title": "My Documents",
+  "documents_subtitle": "Access my CV and motivation letter",
+  "cv_title": "Curriculum Vitae",
+  "cv_description": "My detailed CV in English",
+  "motivation_title": "Motivation Letter",
+  "motivation_description": "My motivation letter for work-study positions",
+  "download_cv_fr": "Download my CV (FR)",
+  "download_cv_en": "Download my CV (EN)",
+  "download_motivation_fr": "Download my letter (FR)",
+  "documents_section": "Documents"
 }
-
-
